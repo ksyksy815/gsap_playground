@@ -1,0 +1,26 @@
+.btn {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, pink, hsl(232, 72%, 42%));
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.toast {
+  width: 200px;
+  height: 50px;
+  background: linear-gradient(135deg, #a8ff78, #78ffd6);
+  border-radius: 10px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  border-radius: 20px;
+  position: relative;
+  
+}
