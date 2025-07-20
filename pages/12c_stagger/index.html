@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 04</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="nav">
+        <a href="/">
+          <img src=" /logo.svg" alt="logo" />
+        </a>
+        <a href="https://jsmastery.com/all-courses" target="_blank"
+          >GSAP Course</a
+        >
+      </header>
+
+      <div class="content">
+        <div class="arrow">
+          <a href="../../index.html">
+            <img src=" /arrow.svg" alt="arrow" />
+          </a>
+        </div>
+
+        <section>
+          <h1>Stagger04</h1>
+          <p>
+            <code>Stagger</code>
+            is GSAP's way of automatically spacing animations,
+            making a group of elements animate one after another beautifully
+            - with just a single line of code.
+          </p>
+
+          <p>
+            In GSAP, <code>stagger</code> is a special property that
+            spaces out the starting time of animations across 
+            multiple elements automatically.
+          </p>
+          
+          <p>
+            Read more about
+            <a
+              href="https://gsap.com/resources/getting-started/Staggers/"
+              target="_blank"
+              >Staggers</a
+            >
+            
+          </p>
+        </section>
+      </div>
+
+     <section class="demo">
+      <h2>Example 1</h2>
+      <code>
+        gsap.to(".box", {
+          scale: 1,
+          duration: 1,
+          stagger: 0.05,
+        });
+      </code>
+
+      <h2>Example 2</h2>
+      <code>
+        gsap.from(".box", {
+          s scale: 0,
+          opacity: 0,
+          immediateRender: false,
+          duration: 1,
+          stagger: 0.1,
+        });
+      </code>
+     </section>
+
+      <script type="module" src="script.js"></script>
+    </main>
+  </body>
+</html>
