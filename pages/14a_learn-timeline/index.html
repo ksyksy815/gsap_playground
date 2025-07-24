@@ -116,6 +116,82 @@
         </section>
       </div>
 
+      <div class="demo flex flex-col gap-5">
+        <div class="box"></div>
+        <div class="flex gap-3 justify-center">
+          <button class="play-btn text-white border border-white px-4 rounded-md">Play</button>
+          <button class="pause-btn text-white border border-white px-4 rounded-md">Pause</button>
+          <button class="reverse-btn text-white border border-white px-4 rounded-md">Reverse</button>
+          <button class="restart-btn text-white border border-white px-4 rounded-md">Restart</button>
+        </div>
+      </div>
+
+      <div class="demo mt-5 text-white">
+        <h2 class="text-2xl">Position Parameter</h2>
+        <p>
+          The position parameter is used to tell GSAP when to start this animation at what time on the timeline.
+        </p>
+        <p>
+          It works with <code>to()</code>, <code>from()</code>, and <code>fromTo()</code> methods.
+        </p>
+        <p>
+          It is incredibly flexible - letting you set exact start times, create gaps, overlap tweens, or even use labels.
+        </p>
+
+        <br/>
+
+        <h2 class="text-2xl">Absolute vs. Relative Timings</h2>
+        <p>
+          In a GSAP timeline, every animation (=tween) has a start time.
+        </p>
+        <ul>
+          <li>By default, tweens are added one after another (sequentially).</li>
+          <li>
+            But you can also control exactly when they start, using absolute or relative timings.
+          </li>
+        </ul>
+
+        <h3 class="text-xl">Absolute Timings</h3>
+        <p>setting the exact timestamp for when a tween starts in the timeline.</p>
+        <code>
+          const tl = gsap.timeline();
+
+          tl.to(".box", { x: 300, duration: 1 }, 0); // starts at 0s
+          tl.to(".circle", { y: 300, duration: 1 }, 2); // starts at 2s
+        </code>
+        <p>The 3rd parameter is the absolute time in seconds.</p>
+
+        <h3 class="text-xl">Relative Timings</h3>
+        <p>setting the start time relative to the end of the previous tween.</p>
+        <code>
+          const tl = gsap.timeline();
+
+tl
+.to(".box", { x: 300, duration: 1 })
+.to(
+  ".circle",
+  { y: 300, duration: 1 },
+  "+=3"
+); // starts 3s after .box finishes
+        </code>
+
+        <p>
+          <code>+=3</code> means "start 3 seconds later".
+        </p>
+        <p>
+          <code>-=3</code> means "start 3 seconds earlier".
+        </p>
+
+        <h2 class="mt-5 text-2xl">Overlapping Animations</h2>
+        <p>Use <code>negative relative positions</code></p>
+
+        <h2 class="mt-5 text-2xl">Relative to Others</h2>
+        <p>When you want to anchor an animation directly to another.</p>
+        
+        <h2 class="mt-5 text-2xl">Bit after, bit before</h2>
+        <p>{``}</p>
+      </div>
+
       <script type="module" src="script.js"></script>
     </main>
   </body>
